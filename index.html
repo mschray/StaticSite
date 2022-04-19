@@ -21,7 +21,6 @@
 //            } = await (await fetch(`/api/MyExampleFuction`)).json();
 
             } = await (await fetch(`/api/MyExampleFuction`)).text();
-			document.write(text);
             document.querySelector('#name').textContent = text;
         }())
     </script>
