@@ -20,7 +20,7 @@
                 text
 //            } = await (await fetch(`/api/MyExampleFuction`)).json();
 
-            } = await (await fetch(`/api/MyExampleFuction`));
+            } = await (await fetch(`/api/MyExampleFuction`)).text();
             document.querySelector('#name').textContent = text;
         }())
     </script>
