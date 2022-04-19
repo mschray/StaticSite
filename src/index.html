@@ -17,7 +17,8 @@
     <script>
 		//https://docs.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript
 		//swa start --app-location src   --api-location api --open
-//https://www.javascripttutorial.net/javascript-fetch-api/#:~:text=%20JavaScript%20Fetch%20API%20%201%20Sending%20a,status%20code%20and%20status%20text%20via...%20More%20
+		//https://www.javascripttutorial.net/javascript-fetch-api/#:~:text=%20JavaScript%20Fetch%20API%20%201%20Sending%20a,status%20code%20and%20status%20text%20via...%20More%20
+		//https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
         (async function() {
             let response = await (await fetch(`/api/MyExampleFuction`));
 			console.log(response.status); // 200
