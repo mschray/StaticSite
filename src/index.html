@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vanilla JavaScript App</title>
+</head>
+
+<body>
+    <main>
+        <h1>Vanilla JavaScript App</h1>
+        <p>Loading content from the API: <b id="name">...</b></p>
+    </main>
+
+    <script>
+		//https://docs.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript
+		//swa start --app-location src   --api-location api --open
+//https://www.javascripttutorial.net/javascript-fetch-api/#:~:text=%20JavaScript%20Fetch%20API%20%201%20Sending%20a,status%20code%20and%20status%20text%20via...%20More%20
+        (async function() {
+            let response = await (await fetch(`/api/MyExampleFuction`));
+			console.log(response.status); // 200
+		    console.log(response.statusText); // OK
+
+	        let data = await response.text();
+			console.log(data);
+//            } = await (await fetch(`/api/MyExampleFuction`)).json();
+//  } = await (await fetch(`/api/MyExampleFuction`)).text();
+
+
+//            } = await (await fetch(`/api/MyExampleFuction`)).text();
+            document.querySelector('#name').textContent = data;
+        }())
+    </script>
+</body>
+
+</html>
